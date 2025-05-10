@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        Usuario usuario = Usuario.criarUsuario();
+        usuario.visualizarSaldo();
+
+        Transacao transacao1 = Transacao.criarTransacao();
+        transacao1.registrarTransacao();
+
+        Relatorio relatorio = new Relatorio(200.50, 3000.00);
+        relatorio.gerarRelatorio();
+
+        Orcamento orcamento = new Orcamento(1000.00);
+        orcamento.verificarOrcamento(1200.00);
+    }
+}
