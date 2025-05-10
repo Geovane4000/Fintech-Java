@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Transacao {
+    private double valor;
+    private String tipo; // "entrada" ou "saida"
+    private String descricao;
+
+    public Transacao(double valor, String tipo, String descricao) {
+        this.valor = valor;
+        this.tipo = tipo;
+        this.descricao = descricao;
+    }
+
+    public void registrarTransacao() {
+        System.out.println("Registrando transação: " + tipo + " de R$ " + valor + " - " + descricao);
+    }
+
+    public static Transacao criarTransacao() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite o valor da transação: ");
+        double valor = scanner.nextDouble();
+        scanner.nextLine(); // consumir quebra de linha
+        System.out.print("Digite o tipo da transação (entrada/saida): ");
+        String tipo = scanner.nextLine();
+        System.out.print("Digite a descrição da transação: ");
+        String descricao = scanner.nextLine();
+        return new Transacao(valor, tipo, descricao);
+    }
+}
