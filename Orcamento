@@ -1,0 +1,15 @@
+public class Orcamento {
+    private double limiteGastos;
+
+    public Orcamento(double limiteGastos) {
+        this.limiteGastos = limiteGastos;
+    }
+
+    public void verificarOrcamento(double gastosAtuais) {
+        if (gastosAtuais > limiteGastos) {
+            System.out.println("Atenção! Você ultrapassou seu limite de gastos de R$ " + limiteGastos);
+        } else {
+            System.out.println("Você está dentro do orçamento. Limite: R$ " + limiteGastos);
+        }
+    }
+}
