@@ -1,0 +1,13 @@
+public class Relatorio {
+    private double totalGastos;
+    private double totalReceitas;
+
+    public Relatorio(double totalGastos, double totalReceitas) {
+        this.totalGastos = totalGastos;
+        this.totalReceitas = totalReceitas;
+    }
+
+    public void gerarRelatorio() {
+        System.out.println("Gerando relatório: Receitas: R$ " + totalReceitas + " - Gastos: R$ " + totalGastos);
+    }
+}
